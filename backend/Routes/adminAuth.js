@@ -12,7 +12,7 @@ adminAuth.post("/addMovie", authenticate, adminCheck, (req, res) => {
             res.status(400).json({ msg: "Movie already exists" });
         }
         else{
-            mDetails.set(MovieName, {  });
+            mDetails.set(MovieName, { NoOfShows,Language,StartDate,ScreenNumber });
             console.log(mDetails.get(MovieName));
             res.status(201).json({ msg: `${MovieName} stored successfully` });
         }
